@@ -10,4 +10,9 @@ public class Piano extends MusicalInstrument {
     public void usePiano(){
         System.out.print("I play the piano");
     }
+
+    @Override
+    public void play() {
+        System.out.print("Piano play");
+    }
 }

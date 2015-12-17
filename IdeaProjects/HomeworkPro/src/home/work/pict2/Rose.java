@@ -11,4 +11,19 @@ public class Rose extends Flower {
         public void prick(){
             System.out.print("I can prick");
         }
+
+    @Override
+    public void grow() {
+        System.out.println("Rose is growing");
     }
+
+    @Override
+    public void bloom() {
+        System.out.print("Rose is blooming");
+    }
+
+    @Override
+    public void smell() {
+        System.out.print("Rose is smells");
+    }
+}

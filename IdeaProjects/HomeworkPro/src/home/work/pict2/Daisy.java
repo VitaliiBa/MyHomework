@@ -10,5 +10,20 @@ public class Daisy extends Flower {
     public void treat(){
         System.out.print("I have more treat");
     }
+
+    @Override
+    public void grow() {
+        System.out.println("Daisy is growing");
+    }
+
+    @Override
+    public void bloom() {
+        System.out.println("Daisy is blooming");
+    }
+
+    @Override
+    public void smell() {
+        System.out.println("Daisy is smels");
+    }
 }
 

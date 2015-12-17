@@ -10,4 +10,9 @@ public class Guitar extends MusicalInstrument {
     public void makeGuitarTrick(){
         System.out.print("I had Guitar");
     }
+
+    @Override
+    public void play() {
+        System.out.print("Guitar play");
+    }
 }

@@ -10,4 +10,9 @@ public class Trumpet extends MusicalInstrument {
     public void useBatton(){
         System.out.print("Used batton");
     }
+
+    @Override
+    public void play() {
+        System.out.print("Trumpet play");
+    }
 }

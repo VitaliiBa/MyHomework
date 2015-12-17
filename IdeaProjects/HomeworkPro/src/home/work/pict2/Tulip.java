@@ -12,4 +12,18 @@ public class Tulip extends Flower {
         System.out.print("I have blossom");
     }
 
+    @Override
+    public void grow() {
+        System.out.print("Tulip is growing");
+    }
+
+    @Override
+    public void bloom() {
+        System.out.print("Tulip is blooming");
+    }
+
+    @Override
+    public void smell() {
+        System.out.print("Tulp is smells");
+    }
 }
