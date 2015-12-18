@@ -21,19 +21,8 @@ public class MusicShop {
         System.out.print("I bought");
     }
     public void addMusicalInstrument(){
-        List musicalInstruments = new ArrayList();
+        List <MusicalInstrument> myMusicalInstrument = new ArrayList<MusicalInstrument>();
+        System.out.println("Instrument working");
 
-        for (int i=0; i<guitarNumber; i++){
-            Guitar newGuitar = new Guitar();
-            musicalInstruments.add(newGuitar);
-        }
-        for(int i=0;i<pianoNumber;i++);{
-            Piano newPiano = new Piano();
-            musicalInstruments.add(newPiano);
-        }
-        for(int i=0;i<trumpetNumber;i++);{
-            Trumpet newTrumpet = new Trumpet();
-            musicalInstruments.add(newTrumpet);
-        }
     }
 }

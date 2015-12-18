@@ -10,9 +10,7 @@ public class Directory {
 
     public String name;
     public String path;
-    public List<AudioFile> audioFiles = new ArrayList<AudioFile>();
-    public List<ImageFile> imageFiles = new ArrayList<ImageFile>();
-    public List<TextFile> textFiles = new ArrayList<TextFile>();
+    public List<File> myFiles = new ArrayList<File>();
 
     public void open(){
         System.out.print("Opened");
@@ -20,9 +18,10 @@ public class Directory {
     public void close(){
         System.out.print("Closed");
     }
-    public void addFiles (List<AudioFile> newAudioFiles, List<TextFile> newTextFiles,List<ImageFile> newImageFiels){
+    public void addFiles (List<File> files){
         System.out.println("Add new files");
     }
 
+    
 
 }

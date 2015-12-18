@@ -20,15 +20,7 @@ public class RoseBush  {
     }
 
     public void useMyRoses() {
-        List <Rose> newRoses = new ArrayList<Rose>();
-
-
-        for(int i=0;i<rosesNumber;i++){
-            Rose newRose = new Rose();
-            newRoses.add(newRose);
-        }
-
-
+        List <Rose> newRoses = new ArrayList<Rose>(rosesNumber);
         System.out.print("I used variable myRose");
     }
 }
