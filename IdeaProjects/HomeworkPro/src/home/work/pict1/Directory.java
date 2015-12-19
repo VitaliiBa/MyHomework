@@ -10,7 +10,7 @@ public class Directory {
 
     public String name;
     public String path;
-    public List<File> myFiles = new ArrayList<File>();
+    public List<File> myFiles;
 
     public void open(){
         System.out.print("Opened");

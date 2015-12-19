@@ -13,6 +13,7 @@ public class MusicShop {
     public int guitarNumber;
     public int pianoNumber;
     public int trumpetNumber;
+    List <MusicalInstrument> myMusicalInstrument;
 
     public void playTest(){
         System.out.print("Test passed");
@@ -21,7 +22,7 @@ public class MusicShop {
         System.out.print("I bought");
     }
     public void addMusicalInstrument(){
-        List <MusicalInstrument> myMusicalInstrument = new ArrayList<MusicalInstrument>();
+        myMusicalInstrument = new ArrayList<MusicalInstrument>();
         System.out.println("Instrument working");
 
     }

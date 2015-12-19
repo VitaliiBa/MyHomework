@@ -10,6 +10,8 @@ public class RoseBush  {
 
     public int rosesNumber;
     public int brunchNumber;
+    List <Rose> newRoses;
+
 
 
     public void prick(){
@@ -20,7 +22,7 @@ public class RoseBush  {
     }
 
     public void useMyRoses() {
-        List <Rose> newRoses = new ArrayList<Rose>(rosesNumber);
+        newRoses = new ArrayList<Rose>(rosesNumber);
         System.out.print("I used variable myRose");
     }
 }
