@@ -11,7 +11,6 @@ public class Bouquet {
     public int flowersNumber;
     public String sortFlowers;
     public String tipeBouquet;
-    public int flowerNumber;
     List<Flower> flowers;
 
     public void enjoy(){
@@ -21,7 +20,7 @@ public class Bouquet {
         System.out.print("I had a great smell");
     }
     public void createBouguet(){
-        flowers = new ArrayList<Flower>(flowerNumber);
+        flowers = new ArrayList<Flower>(flowersNumber);
         System.out.print("I create Bouguet");
     }
 
