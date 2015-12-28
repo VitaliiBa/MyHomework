@@ -1,7 +1,11 @@
 package home.work.pict3;
 
+import home.work.module6.ExceptionModuleSix;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+import java.util.Scanner;
 
 /**
  * Created by Vitalik on 16.12.2015.
@@ -23,7 +27,23 @@ public class MusicShop {
     }
     public void addMusicalInstrument(){
         myMusicalInstrument = new ArrayList<MusicalInstrument>();
-        System.out.println("Instrument working");
+        try {
+            System.out.println("Please enter your instrument:");
+            final Scanner scanner = new Scanner(System.in);
+            final String instrument = scanner.next();
+
+            System.out.println("Instrument adding....");
+            if (instrument.equals("weel"))
+                throw new IllegalStateException();
+            else if (instrument.equals("axe") )
+                throw new ExceptionModuleSix(instrument);
+
+            System.out.println("Instrument added!");
+        } catch (IllegalStateException illE) {
+            System.out.println("[ERROR]: instrument not added because of IllegalStateException! ");
+        } catch (ExceptionModuleSix e) {
+            System.out.println("[ERROR]: instrument not added because of ExceptionModuleSix! "+ e.getMyException());
+        }
 
     }
 }
