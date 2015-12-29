@@ -1,10 +1,9 @@
 package home.work.pict3;
 
-import home.work.module6.ExceptionModuleSix;
+import home.work.module6.InstrumentException;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -33,16 +32,32 @@ public class MusicShop {
             final String instrument = scanner.next();
 
             System.out.println("Instrument adding....");
-            if (instrument.equals("weel"))
-                throw new IllegalStateException();
-            else if (instrument.equals("axe") )
-                throw new ExceptionModuleSix(instrument);
 
-            System.out.println("Instrument added!");
+            switch (instrument){
+                case "weel":
+                    throw new IllegalStateException();
+                case "axe" :
+                    throw new InstrumentException(instrument);
+                case "guitar":
+                    System.out.println("Instrument "+instrument+" added!");
+                    break;
+                case "piano":
+                    System.out.println("Oops. Exceptions ..." );
+                    break;
+                case "trimplet":
+                    System.out.println("Oops. Exceptions...");
+                    break;
+                default:
+                    throw new Exception("Oops. Exception...");
+            }
+
+
         } catch (IllegalStateException illE) {
             System.out.println("[ERROR]: instrument not added because of IllegalStateException! ");
-        } catch (ExceptionModuleSix e) {
-            System.out.println("[ERROR]: instrument not added because of ExceptionModuleSix! "+ e.getMyException());
+        } catch (InstrumentException e) {
+            System.out.println("[ERROR]: instrument "+e.getMyException()+" not added because of InstrumentException! ");
+        } catch (Exception e) {
+            System.out.println("[ERROR]: instrument not added because of Exception! No such instrument exist.");
         }
 
     }
