@@ -4,7 +4,6 @@ package home.work.module4;
  * Created by Vitalik on 20.12.2015.
  */
 public class FigureArea {
-    final double pi = 3.14;
 
     public double squareArea(double a,double b){
         return a*b;
@@ -13,7 +12,7 @@ public class FigureArea {
         return a*h*0.5;
     }
     public double circleArea(double r){
-        return pi*Math.pow(r,2);
+        return Math.PI*Math.pow(r,2);
     }
 
 }

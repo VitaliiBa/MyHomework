@@ -15,7 +15,7 @@ public class MinMaxArrayElement {
             if (myArray[i] > maxValue) {
                 maxValue = myArray[i];
             }
-            else if (myArray[i] < minValue) {
+            else {
                 minValue = myArray[i];
             }
         }
@@ -24,17 +24,9 @@ public class MinMaxArrayElement {
 
     public int getMinOrMaxElement(MinMax mm, int[] myArray) {
         int value = myArray[0];
-        if (mm == MinMax.MAX)
-            for(int i = 1; i < myArray.length; i++) {
-                if (myArray[i] > value)
-                    value = myArray[i];
-            }
-        else if (mm == MinMax.MIN)
-            for(int i = 1; i < myArray.length; i++) {
-                if (myArray[i] < value)
-                    value = myArray[i];
-            }
-
+        for (int i = 1; i < myArray.length; i ++)
+            if ( ( (mm == MinMax.MAX))&&(myArray[i] > value)  || ( (mm == MinMax.MIN)&&(myArray[i] < value)) )
+                value = myArray[i];
         return value;
     }
 }

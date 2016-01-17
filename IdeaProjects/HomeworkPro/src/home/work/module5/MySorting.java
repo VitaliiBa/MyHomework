@@ -39,19 +39,16 @@ public class MySorting {
     }
 
     public int[] sortMin(int[] myArray) {
-        int min = 0;
-        int pos = 0;
-        int temp = 0;
         for (int i=0; i < myArray.length-1; i++) {
-            min = myArray[i];
-            pos = i;
+            int min = myArray[i];
+            int pos = i;
             for (int j = i+1; j < myArray.length; j++) {
                 if (myArray[j] < min) {
                     min = myArray[j];
                     pos = j;
                 }
             }
-            temp = myArray[i];
+            int temp = myArray[i];
             myArray[i] = myArray[pos];
             myArray[pos] = temp;
         }

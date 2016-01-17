@@ -39,13 +39,9 @@ public class MusicShop {
                 case "axe" :
                     throw new InstrumentException(instrument);
                 case "guitar":
-                    System.out.println("Instrument "+instrument+" added!");
-                    break;
                 case "piano":
-                    System.out.println("Oops. Exceptions ..." );
-                    break;
                 case "trimplet":
-                    System.out.println("Oops. Exceptions...");
+                    System.out.println("Instrument "+instrument+" added!");
                     break;
                 default:
                     throw new Exception("Oops. Exception...");
@@ -57,7 +53,7 @@ public class MusicShop {
         } catch (InstrumentException e) {
             System.out.println("[ERROR]: instrument "+e.getMyException()+" not added because of InstrumentException! ");
         } catch (Exception e) {
-            System.out.println("[ERROR]: instrument not added because of Exception! No such instrument exist.");
+            System.out.println("[ERROR]: instrument not added because of Exception! No such instrument exist... "+e.getMessage());
         }
 
     }
