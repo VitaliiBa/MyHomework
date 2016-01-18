@@ -7,6 +7,10 @@ public class Aster extends Flower {
 
     public int fluffy;
 
+    public Aster(String color, int size, int shape, String flowerName) {
+        super(color, size, shape, flowerName);
+    }
+
     public void enjoy(){
         System.out.print("I very fluffy");
     }

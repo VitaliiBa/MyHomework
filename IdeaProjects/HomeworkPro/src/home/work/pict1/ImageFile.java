@@ -7,6 +7,10 @@ public class ImageFile extends File {
 
     public String imageType;
 
+    public ImageFile(String extension, int size, String name) {
+        super(extension, size, name);
+    }
+
     public String getImageType() {
         return imageType;
     }

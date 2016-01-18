@@ -8,7 +8,11 @@ public class Rose extends Flower {
         public int thorns;
         public int budSize;
 
-        public void prick(){
+    public Rose(String color, int size, int shape, String name) {
+        super(color,size,shape,name);
+    }
+
+    public void prick(){
             System.out.print("I can prick");
         }
 

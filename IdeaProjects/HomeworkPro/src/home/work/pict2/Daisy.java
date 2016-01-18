@@ -7,6 +7,10 @@ public class Daisy extends Flower {
 
     public int theNumbersOfPetals;
 
+    public Daisy(String color, int size, int shape, String flowerName) {
+        super(color, size, shape, flowerName);
+    }
+
     public void treat(){
         System.out.print("I have more treat");
     }

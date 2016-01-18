@@ -8,6 +8,10 @@ public class TextFile extends File {
 
     public String language;
 
+    public TextFile(String extension, int size, String name) {
+        super(extension, size, name);
+    }
+
     public String getLanguage() {
         return language;
     }

@@ -7,6 +7,10 @@ public class AudioFile extends File {
 
     public String audioType;
 
+    public AudioFile(String extension, int size, String name) {
+        super(extension, size, name);
+    }
+
     public void setAudioType(String audioType) {
         this.audioType = audioType;
     }

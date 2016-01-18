@@ -8,6 +8,10 @@ public class Tulip extends Flower {
     public String color;
     public String sort;
 
+    public Tulip(String color, int size, int shape, String flowerName) {
+        super(color, size, shape, flowerName);
+    }
+
     public void blossom(){
         System.out.print("I have blossom");
     }

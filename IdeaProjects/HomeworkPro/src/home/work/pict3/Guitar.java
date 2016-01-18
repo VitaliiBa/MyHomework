@@ -7,6 +7,10 @@ public class Guitar extends MusicalInstrument {
 
     public String fingerboard;
 
+    public Guitar(String color, int size) {
+        super(color, size);
+    }
+
     public void makeGuitarTrick(){
         System.out.print("I had Guitar");
     }

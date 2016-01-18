@@ -7,6 +7,10 @@ public class Trumpet extends MusicalInstrument {
 
     public String button;
 
+    public Trumpet(String color, int size) {
+        super(color, size);
+    }
+
     public void useBatton(){
         System.out.print("Used batton");
     }
