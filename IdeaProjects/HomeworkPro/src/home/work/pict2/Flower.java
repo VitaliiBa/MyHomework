@@ -20,11 +20,21 @@ public abstract class Flower {
                 '}';
     }
 
+    public String getFlowerName() {
+        return flowerName;
+    }
+
+    public void setFlowerName(String flowerName) {
+
+        this.flowerName = flowerName;
+    }
+
     public Flower(String color, int size, int shape, String flowerName) {
         this.color = color;
         this.size = size;
         this.shape = shape;
         this.flowerName = flowerName;
+
     }
 
     abstract public void grow();

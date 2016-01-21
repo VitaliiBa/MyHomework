@@ -10,7 +10,16 @@ public abstract class File {
     public String name;
 
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public File(String extension, int size, String name) {
+
         this.extension = extension;
         this.size = size;
         this.name = name;
