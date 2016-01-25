@@ -4,12 +4,21 @@ package home.work.pict3;
  * Created by Vitalik on 25.01.2016.
  */
 public class Caesar {
-
-    public static String decode(String enc, int offset) {
-        return encode(enc, 26-offset);
+    public int getOffset() {
+        return offset;
     }
 
-    public static String encode(String enc, int offset) {
+    public void setOffset(int offset) {
+        this.offset = offset;
+    }
+
+    public int offset;
+
+    public String decode(String enc) {
+        return encode(enc, 26-this.offset);
+    }
+
+    public String encode(String enc, int offset) {
         offset = offset % 26 + 26;
         StringBuilder encoded = new StringBuilder();
         for (char i : enc.toCharArray()) {
