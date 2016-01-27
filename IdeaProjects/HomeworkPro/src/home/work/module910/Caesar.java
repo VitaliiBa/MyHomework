@@ -1,4 +1,4 @@
-package home.work.pict3;
+package home.work.module910;
 
 /**
  * Created by Vitalik on 25.01.2016.
