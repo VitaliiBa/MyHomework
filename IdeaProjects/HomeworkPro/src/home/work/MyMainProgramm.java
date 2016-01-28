@@ -65,11 +65,8 @@ public class MyMainProgramm {
 
         String fileName = "myMod10.txt";
 
-        try {
-            fileFunc.saveToFile(fileName, encoded);
-            System.out.println(caesar.decode(fileFunc.getFromFile(fileName)));
-        } catch (IOException e){
-            System.out.println(e.getMessage());
+        fileFunc.saveToFile(fileName, encoded);
+        System.out.println(caesar.decode(fileFunc.getFromFile(fileName)));
         }
     }
-}
+

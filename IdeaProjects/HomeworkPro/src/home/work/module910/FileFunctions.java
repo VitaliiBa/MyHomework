@@ -1,6 +1,8 @@
 package home.work.module910;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -9,29 +11,48 @@ import java.util.Scanner;
 public class FileFunctions {
 
     public String getUserText(){
+        Scanner scanner = new Scanner(System.in);
+        StringBuilder userInput = new StringBuilder();
+
+        System.out.println("Enter desired number of liens");
+        int linesNum = 0;
+        try{
+            linesNum = scanner.nextInt();
+        } catch (InputMismatchException te){
+            System.out.println("Entered data is incorrect. "+te.getMessage());
+        }
+
         System.out.println("Please enter your message:");
-        final Scanner scanner = new Scanner(System.in);
-        String userInput = scanner.nextLine();
-        return userInput;
+        int count = 0;
+        while (count < linesNum) {
+            userInput.append(scanner.nextLine());
+            count++;
+        }
+        return userInput.toString();
     }
 
-    public void saveToFile(String fileName, String textToSave) throws IOException {
+    public void saveToFile(String fileName, String textToSave)  {
         try(PrintWriter out = new PrintWriter(fileName)){
             out.print(textToSave);
+        } catch (IOException ioe){
+            ioe.getMessage();
+            System.out.println("You got IOException"+ioe.getMessage());
         }
     }
 
     public String getFromFile(String fileName) {
-        String fromFile = "";
+        StringBuilder fromFile = new StringBuilder();
         try {
             Scanner in = new Scanner(new File(fileName));
             while(in.hasNext())
-                fromFile += in.nextLine() + System.getProperty("line.separator");
+                fromFile.append(in.nextLine() + System.getProperty("line.separator"));
             in.close();
-        } catch (IOException ioe) {
+        } catch (IOException ioe){
             ioe.getMessage();
-        } finally {
-            return fromFile;
+            System.out.println("You got IOException"+ioe.getMessage());
+
+
         }
+        return fromFile.toString();
     }
 }
