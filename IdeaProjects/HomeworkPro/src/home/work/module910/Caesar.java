@@ -12,7 +12,7 @@ public class Caesar {
         this.offset = offset;
     }
 
-    public int offset;
+    private int offset;
 
     public String decode(String enc) {
         return encode(enc, 26-this.offset);
