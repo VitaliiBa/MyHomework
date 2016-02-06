@@ -19,7 +19,7 @@ public class MinMaxArrayElement {
                 minValue = myArray[i];
             }
         }
-        System.out.println("Min = "+minValue+"; MAx = "+maxValue);
+        System.out.println("Min = "+minValue+"; Max = "+maxValue);
     }
 
     public int getMinOrMaxElement(MinMax mm, int[] myArray) {

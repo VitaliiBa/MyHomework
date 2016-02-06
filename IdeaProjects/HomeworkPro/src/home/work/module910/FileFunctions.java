@@ -14,7 +14,7 @@ public class FileFunctions {
         Scanner scanner = new Scanner(System.in);
         StringBuilder userInput = new StringBuilder();
 
-        System.out.println("Enter desired number of liens");
+        System.out.println("Enter desired number of lines");
         int linesNum = 0;
         try{
             linesNum = scanner.nextInt();
