@@ -13,13 +13,9 @@ public class TestModule4 {
     private static final double delta = 0.0001;
 
     private Distance distance;
-    @BeforeClass
-    public static void setUpClass()throws Exception{
-        Distance distance = new Distance();
 
-    }
     @Test
-    public void testDistance()throws Exception{
+    public void shouldReturnCorrectDistance()throws Exception{
         final double x1 = 4;
         final double y1 = 9;
         final double x2 = 45;
@@ -31,7 +27,7 @@ public class TestModule4 {
     }
 
     @Test
-    public void testSquareArea()throws Exception{
+    public void shouldReturnCorrectSquareArea()throws Exception{
         final double a = 7;
         final double b = 3.5;
         final double expectedResult = a*b;
@@ -40,7 +36,7 @@ public class TestModule4 {
         Assert.assertEquals("Actual result differs from expected. Test is falied.",expectedResult,actualResult,delta);
     }
     @Test
-    public void testtriangleArea()throws Exception{
+    public void shouldReturnCorrectTriangleArea()throws Exception{
         final double a = 3.4;
         final double h = 7.8;
         final double expectedResult = a*h*0.5;
@@ -49,7 +45,7 @@ public class TestModule4 {
         Assert.assertEquals("Actual result differs from expected. Test is falied",expectedResult,actualResult,delta);
     }
     @Test
-    public void testcircleArea() throws Exception{
+    public void shouldReturnCorrectCircleArea() throws Exception{
         final double r = 7.2;
         final  double expectedResult = Math.PI*Math.pow(r,2);
         final FigureArea figureArea = new FigureArea();
