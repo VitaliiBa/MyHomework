@@ -8,8 +8,8 @@ import home.work.pict1.ImageFile;
 import home.work.pict1.TextFile;
 import home.work.pict2.*;
 import home.work.pict3.*;
+import home.work.practice.*;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +18,23 @@ import java.util.List;
  */
 public class MyMainProgramm {
     public static void main(String []args){
-        moduleTen();
+        tryAlphabet();
+    }
+
+    public static void tryFirstUnique() {
+        FirstUniqueCharacter myTest = new FirstUniqueCharacter();
+        String input = "\"aa\"";
+        System.out.println("INPUT: "+input+
+                System.getProperty("line.separator")+
+                "RESULT: " +myTest.find(input));
+    }
+
+    public static void tryAlphabet(){
+        Alphabet myTest = new Alphabet();
+        String input = "\"abcdeFghijKlmnopqrstuvwxyz\"";
+        System.out.println("INPUT: "+input+
+                System.getProperty("line.separator")+
+                "RESULT: " +myTest.check(input));
     }
 
     public static void moduleEight(){
